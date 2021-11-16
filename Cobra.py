@@ -2,7 +2,7 @@
 import os
 import pygame
 import random
-from TentaCobra import *
+from CobraClass import *
 
 PATH = os.path.dirname(os.path.abspath(__file__))
 def get_path(*slices):
@@ -135,7 +135,7 @@ def main(Flux, Paus, Inicia):
 						
 						Teclas = pygame.key.get_pressed()
 						
-						Will_Smith = pygame.image.load(get_path('William.png'))
+						Will_Smith = pygame.image.load(get_path('img\William.png'))
 						
 						
 						
