@@ -63,22 +63,22 @@ class Cobra(pygame.sprite.Sprite):
 			self.rect.centery += 40
 		
 		
-		if Tec[pygame.K_RIGHT] and self.rect.centerx + 21 <= 1000 and self.Esq == False:
+		if Tec[pygame.K_RIGHT] or Tec[pygame.K_d] and self.rect.centerx + 21 <= 1000 and self.Esq == False:
 			self.Esq = False
 			self.Sob = False
 			self.Des = False
 			self.Dir = True 
-		elif Tec[pygame.K_LEFT] and self.rect.centerx - 21 > 0 and self.Dir == False:
+		elif Tec[pygame.K_LEFT] or Tec[pygame.K_a] and self.rect.centerx - 21 > 0 and self.Dir == False:
 			self.Esq = True
 			self.Sob = False
 			self.Des = False
 			self.Dir = False
-		elif Tec[pygame.K_UP] and self.rect.bottom > 40 and self.Des == False:
+		elif Tec[pygame.K_UP] or Tec[pygame.K_w] and self.rect.bottom > 40 and self.Des == False:
 			self.Esq = False
 			self.Sob = True
 			self.Des = False
 			self.Dir = False
-		elif Tec[pygame.K_DOWN] and self.rect.bottom < 760 and self.Sob == False:
+		elif Tec[pygame.K_DOWN] or Tec[pygame.K_s] and self.rect.bottom < 760 and self.Sob == False:
 			self.Esq = False
 			self.Sob = False
 			self.Des = True
